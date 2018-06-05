@@ -25,7 +25,7 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
     @NonNull
     @Override
     public TopViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.top_item, parent, false);
+        View view = new ItemView(context);
         return new TopViewHolder(view);
     }
 
@@ -40,17 +40,15 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
     }
 
     class TopViewHolder extends RecyclerView.ViewHolder {
-        private ImageView poster;
 
         public TopViewHolder(View itemView) {
             super(itemView);
-            poster = itemView.findViewById(R.id.image_view);
         }
 
         public void bindItem(String url) {
             Picasso.get()
                     .load(url)
-                    .into(poster);
+                    .into((ImageView) itemView);
         }
     }
 }
