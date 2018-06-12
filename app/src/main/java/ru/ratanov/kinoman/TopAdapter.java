@@ -15,9 +15,9 @@ import java.util.List;
 public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
 
     private Context context;
-    private List<String> items;
+    private List<TopFilm> items;
 
-    public TopAdapter(Context context, List<String> items) {
+    public TopAdapter(Context context, List<TopFilm> items) {
         this.context = context;
         this.items = items;
     }
@@ -31,7 +31,7 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull TopViewHolder holder, int position) {
-        holder.bindItem(items.get(position));
+        holder.bindItem(items.get(position).getPosterUrl());
     }
 
     @Override
