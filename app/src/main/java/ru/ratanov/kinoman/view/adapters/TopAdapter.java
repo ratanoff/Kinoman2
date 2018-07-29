@@ -1,9 +1,8 @@
-package ru.ratanov.kinoman;
+package ru.ratanov.kinoman.view.adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -11,6 +10,9 @@ import android.widget.ImageView;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+
+import ru.ratanov.kinoman.model.TopFilm;
+import ru.ratanov.kinoman.view.TopItemView;
 
 public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
 
@@ -25,7 +27,7 @@ public class TopAdapter extends RecyclerView.Adapter<TopAdapter.TopViewHolder> {
     @NonNull
     @Override
     public TopViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = new ItemView(context);
+        View view = new TopItemView(context);
         return new TopViewHolder(view);
     }
 

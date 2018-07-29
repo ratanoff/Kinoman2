@@ -1,4 +1,4 @@
-package ru.ratanov.kinoman
+package ru.ratanov.kinoman.managers
 
 import org.jsoup.Connection
 import org.jsoup.Jsoup

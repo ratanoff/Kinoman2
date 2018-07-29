@@ -1,11 +1,11 @@
-package ru.ratanov.kinoman
+package ru.ratanov.kinoman.view
 
 import android.content.Context
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 
-class ItemView(context: Context) : ImageView(context) {
+class TopItemView(context: Context) : ImageView(context) {
 
     private val SPANS_COUNT = 3
     private val PADDING = 1

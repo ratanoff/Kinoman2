@@ -9,6 +9,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.List;
 
+import ru.ratanov.kinoman.view.TopItemView;
+
 public class Test {
 
     private void test() throws FileNotFoundException {
@@ -16,6 +18,6 @@ public class Test {
 
         Gson gson = new GsonBuilder().create();
 
-        List<ItemView> items = gson.fromJson(reader, new TypeToken<List<String>>() {}.getType());
+        List<TopItemView> items = gson.fromJson(reader, new TypeToken<List<String>>() {}.getType());
     }
 }
