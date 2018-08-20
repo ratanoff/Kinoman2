@@ -2,6 +2,7 @@ package ru.ratanov.kinoman.managers.firebase
 
 import android.util.Log
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
+import ru.ratanov.kinoman.managers.update.ForceUpdateChecker
 import java.util.HashMap
 
 object FirebaseManager {
@@ -14,8 +15,6 @@ object FirebaseManager {
         // set in-app defaults
         val remoteConfigDefaults = HashMap<String, Any>()
         remoteConfigDefaults[ForceUpdateChecker.KEY_UPDATE_REQUIRED] = false
-        remoteConfigDefaults[ForceUpdateChecker.KEY_CURRENT_VERSION] = "1.0.0"
-        remoteConfigDefaults[ForceUpdateChecker.KEY_UPDATE_URL] = "https://play.google.com/store/apps/details?id=com.sembozdemir.renstagram"
 
         firebaseRemoteConfig.setDefaults(remoteConfigDefaults)
         firebaseRemoteConfig.fetch(60)
